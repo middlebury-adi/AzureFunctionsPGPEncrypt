@@ -21,7 +21,7 @@ namespace AzureFunctionsPGPEncrypt
         }
 
         [Function(nameof(PGPDecryptAndVerify))]
-        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
+        public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req)
         {
             _logger.LogInformation($"C# HTTP trigger function {nameof(PGPDecryptAndVerify)} processed a request.");
 
