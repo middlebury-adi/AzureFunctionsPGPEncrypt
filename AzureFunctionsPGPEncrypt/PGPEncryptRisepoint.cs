@@ -36,7 +36,7 @@ public class PGPEncryptRisepoint
         byte[] publicKeyBytes = Convert.FromBase64String(publicKeyBase64);
         string publicKey = Encoding.UTF8.GetString(publicKeyBytes);
 
-        var inputStream = new MemoryStream();PGPEncryptRisepoint
+        var inputStream = new MemoryStream();
         await req.Body.CopyToAsync(inputStream);
         inputStream.Seek(0, SeekOrigin.Begin);
 
