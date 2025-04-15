@@ -21,7 +21,7 @@ public class PGPEncryptAndSign
     }
 
     [Function(nameof(PGPEncryptAndSign))]
-    public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Function, "post")] HttpRequest req)
+    public async Task<IActionResult> RunAsync([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequest req)
     {
         _logger.LogInformation($"C# HTTP trigger function {nameof(PGPEncryptAndSign)} processed a request.");
 
